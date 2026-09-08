@@ -245,12 +245,46 @@ async function initJobPage() {
 
   const form = document.getElementById("apply-form");
   const statusEl = document.getElementById("apply-status");
+
+  function tagApplicationWithJob() {
+    document.getElementById("apply-job-id").value = job.id;
+    document.getElementById("apply-job-title").value = job.title;
+    document.getElementById("apply-company").value = company ? company.name : "";
+  }
+
   if (form) {
+    tagApplicationWithJob();
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      statusEl.textContent =
-        "Applications aren't being collected yet — this form is a preview while the job board is being built.";
-      statusEl.hidden = false;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      statusEl.hidden = true;
+      statusEl.classList.remove("apply-status-error");
+
+      const body = new URLSearchParams(new FormData(form)).toString();
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("Submission failed");
+          form.reset();
+          tagApplicationWithJob();
+          statusEl.textContent = "Thanks! Your application has been submitted.";
+          statusEl.hidden = false;
+        })
+        .catch(() => {
+          statusEl.textContent =
+            "Something went wrong submitting your application. Please try again in a moment.";
+          statusEl.classList.add("apply-status-error");
+          statusEl.hidden = false;
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
     });
   }
 }

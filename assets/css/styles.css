@@ -466,6 +466,17 @@ img { max-width: 100%; display: block; }
   margin: 0;
 }
 
+.apply-status.apply-status-error {
+  color: #8a1f11;
+  background: #fdecea;
+}
+
+.apply-form .apply-btn:disabled {
+  background: #cfd8e3;
+  color: #6b7684;
+  cursor: not-allowed;
+}
+
 /* ---------- Org chart ---------- */
 .org-chart {
   display: flex;

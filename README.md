@@ -8,14 +8,21 @@ from a phone browser.
 
 ## Preview it
 
-**Option A — GitHub Pages (recommended, works from your phone):**
+**Option A — Netlify (required for application forms to actually work):**
+The site is connected to a Netlify project, which auto-deploys on every push
+and is the only place [Netlify Forms](https://docs.netlify.com/manage/forms/setup/)
+submissions get captured (see [Applications](#applications) below). Open the
+site's Netlify URL from your phone — it updates automatically within a minute
+or two of a push.
+
+**Option B — GitHub Pages (browsing only — applications won't be captured here):**
 1. Go to the repo's **Settings → Pages**.
 2. Under "Build and deployment", set **Source: Deploy from a branch**.
 3. Pick this branch (`claude/job-board-class-simulations-9qq2gz`, or `main` once merged) and folder `/ (root)`, then **Save**.
 4. GitHub gives you a URL like `https://<username>.github.io/<repo>/` — open that on your phone.
 5. Every time new commits are pushed to that branch, the live page updates automatically (usually within a minute).
 
-**Option B — run it locally:**
+**Option C — run it locally:**
 ```bash
 python3 -m http.server 8000
 # then open http://localhost:8000 in a browser
@@ -95,13 +102,23 @@ postings with less information (e.g. no listed pay or benefits) still look
 clean. The job will show up as a card in the homepage search results and as
 a full standardized posting on its company's page.
 
+## Applications
+
+Each job page (`job.html?id=...`) has a real application form (name, email,
+phone, availability, and a "why are you a good fit" message). It submits via
+[Netlify Forms](https://docs.netlify.com/manage/forms/setup/) — no custom
+backend or database to run. This only works on the site's **Netlify** deploy
+(Netlify scans the site at build time to register the form); a GitHub Pages
+copy of the same files will show the form but submissions won't go anywhere.
+
+**Viewing submissions (admin view):** log in to the Netlify dashboard for this
+site → **Forms** tab. Every application shows up there as "job-application",
+with hidden fields `job-id`, `job-title`, and `company` on each submission so
+you can tell which posting it's for. You can export everything to CSV from
+that same tab.
+
 ## Roadmap (not built yet)
 
-- **Application forms + admin view:** GitHub Pages only serves static files, so
-  accepting and storing form submissions will need a small external form
-  backend (e.g., a Google Form/Sheet, Formspree, or a lightweight serverless
-  function) rather than plain HTML forms. Flag this when you're ready to add
-  it and we'll wire up a form + a private admin page to review submissions.
 - **Stock ticker / performance metrics:** planned as another JSON-driven
   section (e.g., `data/metrics.json`) rendered on the homepage or company
   pages.
