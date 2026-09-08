@@ -82,5 +82,47 @@
         "description": "Monitors dining room pacing, seats guests effectively, and coordinates between front-of-house staff and the kitchen, greets diners and resolves complaints on the spot, and coaches team members while enforcing dress codes and behavior standards."
       }
     ]
+  },
+  {
+    "slug": "bubbles-and-barks",
+    "name": "Bubbles & Barks",
+    "logo": "assets/logos/bubbles-and-barks.jpg",
+    "industry": "Service — Pet Care / Mobile Dog Grooming",
+    "tagline": "Convenient, gentle dog grooming that comes to your door.",
+    "services": ["Dog Bathing", "Drying", "Brushing", "Coat Trimming", "Nail Trimming"],
+    "description": "Bubbles & Barks is a fictional mobile dog wash and grooming business that brings pet care directly to customers. Our team travels in an equipped grooming van and provides appointments outside customers' homes, saving owners a trip to a grooming salon. Customers can choose a basic wash or a grooming package based on their dog's needs, and our goal is to provide friendly service, gentle handling, and a clean grooming environment.",
+    "team": [
+      {
+        "id": "kristen",
+        "name": "Kristen Abrams",
+        "title": "Manager",
+        "level": 1,
+        "description": "Oversees daily operations as the primary manager, assigns tasks, coordinates employee schedules and grooming appointments, and monitors service quality. Manages the budget, approves purchases, resolves customer concerns, and meets with the team to review progress and address problems."
+      },
+      {
+        "id": "addy",
+        "name": "Addy Hofmans",
+        "title": "Sales Manager",
+        "level": 2,
+        "reportsTo": "kristen",
+        "description": "Explains grooming services and packages to customers and helps them choose services that fit their needs. Responds to sales inquiries, follows up with interested customers, and books appointments. Tracks sales and payments, works toward sales goals, and shares customer feedback with Kristen to improve service."
+      },
+      {
+        "id": "riley",
+        "name": "Riley Denote",
+        "title": "Marketing Coordinator",
+        "level": 2,
+        "reportsTo": "kristen",
+        "description": "Creates social media posts, flyers, and promotions to introduce Bubbles & Barks to local dog owners. Maintains a marketing calendar and keeps service information consistent across advertising channels, and works with Addy to turn customer interest into bookings."
+      },
+      {
+        "id": "harmony",
+        "name": "Harmony James",
+        "title": "IT Support",
+        "level": 2,
+        "reportsTo": "kristen",
+        "description": "Sets up and maintains the online booking system, business devices, and payment technology. Troubleshoots technical problems, updates website service information, manages employee account access, performs software updates and data backups, and reports unresolved issues to Kristen."
+      }
+    ]
   }
 ]
