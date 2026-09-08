@@ -21,13 +21,13 @@ function jobCardHTML(job, company) {
       <div class="job-card-top">
         <img class="job-card-logo" src="${company ? company.logo : ""}" alt="${company ? company.name : ""} logo" />
         <div>
-          <h3 class="job-title"><a href="company.html?slug=${job.companySlug}#job-${job.id}">${job.title}</a></h3>
+          <h3 class="job-title"><a href="job.html?id=${job.id}">${job.title}</a></h3>
           <p class="job-meta">${company ? company.name : "Unknown company"}${job.location ? " · " + job.location : ""}</p>
         </div>
       </div>
       ${tags.length ? `<div class="job-tags">${tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>` : ""}
       ${job.summary ? `<p class="job-snippet">${job.summary}</p>` : ""}
-      <a href="company.html?slug=${job.companySlug}#job-${job.id}"><button class="apply-btn">View Details</button></a>
+      <a href="job.html?id=${job.id}"><button class="apply-btn">View Details</button></a>
     </article>
   `;
 }
@@ -42,7 +42,7 @@ function jobBulletsHTML(heading, items) {
   `;
 }
 
-function jobDetailHTML(job, company) {
+function jobDetailHTML(job) {
   const metaParts = [
     job.department,
     job.reportsTo ? `Reports to: ${job.reportsTo}` : null,
@@ -52,19 +52,16 @@ function jobDetailHTML(job, company) {
   ].filter(Boolean);
 
   return `
-    <article class="job-detail" id="job-${job.id}">
-      <div class="job-detail-head">
-        <h3 class="job-detail-title">${job.title}</h3>
-        ${metaParts.length ? `<p class="job-detail-meta">${metaParts.join(" · ")}</p>` : ""}
-      </div>
-      ${job.summary ? `<div class="job-section"><h4>Job Summary</h4><p>${job.summary}</p></div>` : ""}
-      ${jobBulletsHTML("Key Responsibilities", job.responsibilities)}
-      ${jobBulletsHTML("Required Qualifications", job.requiredQualifications)}
-      ${jobBulletsHTML("Preferred Qualifications", job.preferredQualifications)}
-      ${jobBulletsHTML("Compensation & Benefits", job.benefits)}
-      ${job.whyJoinUs ? `<div class="job-section"><h4>Why Join Us?</h4><p>${job.whyJoinUs}</p></div>` : ""}
-      <button class="apply-btn" disabled title="Applications open later this semester">Applications Open Soon</button>
-    </article>
+    <div class="job-detail-head">
+      <h1 class="job-detail-title">${job.title}</h1>
+      ${metaParts.length ? `<p class="job-detail-meta">${metaParts.join(" · ")}</p>` : ""}
+    </div>
+    ${job.summary ? `<div class="job-section"><h4>Job Summary</h4><p>${job.summary}</p></div>` : ""}
+    ${jobBulletsHTML("Key Responsibilities", job.responsibilities)}
+    ${jobBulletsHTML("Required Qualifications", job.requiredQualifications)}
+    ${jobBulletsHTML("Preferred Qualifications", job.preferredQualifications)}
+    ${jobBulletsHTML("Compensation & Benefits", job.benefits)}
+    ${job.whyJoinUs ? `<div class="job-section"><h4>Why Join Us?</h4><p>${job.whyJoinUs}</p></div>` : ""}
   `;
 }
 
@@ -208,13 +205,58 @@ async function initCompanyPage() {
     <h2>Open Positions at ${company.name}</h2>
     ${
       companyJobs.length
-        ? `<div class="job-detail-list">${companyJobs.map((j) => jobDetailHTML(j, company)).join("")}</div>`
+        ? `<div class="job-list">${companyJobs.map((j) => jobCardHTML(j, company)).join("")}</div>`
         : emptyStateHTML("No open positions posted yet.")
     }
   `;
 }
 
+// ---------------- Job detail + application page ----------------
+async function initJobPage() {
+  const rootEl = document.getElementById("job-page");
+  if (!rootEl) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const jobId = params.get("id");
+  const { companies, jobs } = await loadData();
+  const job = jobs.find((j) => j.id === jobId);
+
+  if (!job) {
+    rootEl.innerHTML = emptyStateHTML("We couldn't find that job posting. Head back to the job board.");
+    return;
+  }
+
+  const company = companyBySlug(companies, job.companySlug);
+  document.title = `${job.title} at ${company ? company.name : "Unknown company"} — Class Job Board`;
+
+  document.getElementById("job-back-link").innerHTML = `&larr; Back to ${company ? company.name : "Company"}`;
+  document.getElementById("job-back-link").href = company ? `company.html?slug=${company.slug}` : "index.html";
+
+  document.getElementById("job-company-strip").innerHTML = company
+    ? `
+      <a class="job-company-strip-link" href="company.html?slug=${company.slug}">
+        <img src="${company.logo}" alt="${company.name} logo" />
+        <span>${company.name}</span>
+      </a>
+    `
+    : "";
+
+  document.getElementById("job-detail").innerHTML = jobDetailHTML(job);
+
+  const form = document.getElementById("apply-form");
+  const statusEl = document.getElementById("apply-status");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      statusEl.textContent =
+        "Applications aren't being collected yet — this form is a preview while the job board is being built.";
+      statusEl.hidden = false;
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initHomePage();
   initCompanyPage();
+  initJobPage();
 });

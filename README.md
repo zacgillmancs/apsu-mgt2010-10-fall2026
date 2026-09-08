@@ -1,7 +1,7 @@
 # MGT 2010 Class Job Board
 
-A simple, static job board (styled after Indeed) built for the MGT 2010 business
-simulation. Each student group's company gets a listing on the homepage and a
+A simple, static job board (styled after Indeed) built for MGT 2010.
+Each student group's company gets a listing on the homepage and a
 detailed "About Us" page with its org chart and open positions. No build step —
 plain HTML/CSS/JS, so it can be hosted for free on GitHub Pages and previewed
 from a phone browser.

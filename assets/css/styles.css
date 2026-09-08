@@ -355,21 +355,28 @@ img { max-width: 100%; display: block; }
 
 .service-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
 
-/* ---------- Job detail (company page) ---------- */
-.job-detail-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+/* ---------- Job detail page ---------- */
+.job-company-strip { margin-bottom: 1.25rem; }
 
-.job-detail {
+.job-company-strip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.4rem;
-  background: #fbfcfe;
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem 0.4rem 0.4rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+  font-size: 0.9rem;
 }
 
-.job-detail + .job-detail { margin-top: 0; }
+.job-company-strip-link img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 .job-detail-head {
   border-bottom: 1px solid var(--line);
@@ -408,6 +415,56 @@ img { max-width: 100%; display: block; }
 }
 
 .job-section li { margin-bottom: 0.3rem; }
+
+/* ---------- Application form ---------- */
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 520px;
+}
+
+.apply-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.apply-form .optional {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.apply-form input,
+.apply-form textarea {
+  font: inherit;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+}
+
+.apply-form input:focus,
+.apply-form textarea:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: -1px;
+}
+
+.apply-form .apply-btn {
+  align-self: flex-start;
+}
+
+.apply-status {
+  font-size: 0.88rem;
+  color: var(--brand-dark);
+  background: #eef3fb;
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  margin: 0;
+}
 
 /* ---------- Org chart ---------- */
 .org-chart {

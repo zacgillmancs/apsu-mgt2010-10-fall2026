@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job — Class Job Board</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JB</span>
+        Class Job Board
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Find Jobs</a>
+        <a href="index.html#companies">Companies</a>
+      </nav>
+      <div class="course-tag">MGT 2010</div>
+    </div>
+  </header>
+
+  <main class="page" id="job-page">
+    <a id="job-back-link" class="back-link" href="index.html">&larr; Back</a>
+
+    <div id="job-company-strip" class="job-company-strip"></div>
+
+    <section id="job-detail" class="card-block"></section>
+
+    <section class="card-block">
+      <h2>Apply for this Position</h2>
+      <form id="apply-form" class="apply-form">
+        <label>
+          Full Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Phone <span class="optional">(optional)</span>
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          Availability <span class="optional">(optional)</span>
+          <input type="text" name="availability" placeholder="e.g. Weekday afternoons, weekends" />
+        </label>
+        <label>
+          Why are you a good fit for this role?
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="apply-btn">Submit Application</button>
+        <p id="apply-status" class="apply-status" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Built for MGT 2010 · Companies and jobs are added throughout the semester.
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
