@@ -40,5 +40,47 @@
         "description": "Oversees lawn care jobs, equipment, and supplies. Makes sure mowing, trimming, edging, and cleanup services are completed efficiently and meet quality standards."
       }
     ]
+  },
+  {
+    "slug": "bleu-room",
+    "name": "Bleu Room",
+    "logo": "assets/logos/bleu-room.png",
+    "industry": "Hospitality — Restaurant / Food Service",
+    "tagline": "Bold flavors from around the world, served in a stylish, welcoming space.",
+    "services": ["Dine-In", "Multi-Cuisine Menu", "Catering", "Private Events"],
+    "description": "Bleu Room is a trendy yet cozy local restaurant serving a diverse menu of multi-cuisine favorites in a stylish, welcoming space. From comforting classics to bold international flavors, we bring the best of the world's culinary traditions straight to your table.",
+    "team": [
+      {
+        "id": "marcus",
+        "name": "Marcus Spinks",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees both front-of-house and kitchen to ensure fast and smooth service, hires, trains, schedules, and mentors all team members, and enforces health codes, labor laws, and safety regulations."
+      },
+      {
+        "id": "yucheng",
+        "name": "Yucheng Weng",
+        "title": "Marketing Coordinator",
+        "level": 2,
+        "reportsTo": "marcus",
+        "description": "Helps plan, execute, and track digital, social media, and print marketing campaigns, and gathers consumer data, analyzes competitor trends, and prepares summary reports."
+      },
+      {
+        "id": "jack",
+        "name": "Jack Hicks",
+        "title": "Financial Manager",
+        "level": 2,
+        "reportsTo": "marcus",
+        "description": "Creates balance sheets, income statements, and cash flow forecasts, monitors spending and tracks financials, and studies market conditions to find ways to cut costs and maximize profits."
+      },
+      {
+        "id": "ace",
+        "name": "Ace Doane",
+        "title": "Floor Manager",
+        "level": 2,
+        "reportsTo": "marcus",
+        "description": "Monitors dining room pacing, seats guests effectively, and coordinates between front-of-house staff and the kitchen, greets diners and resolves complaints on the spot, and coaches team members while enforcing dress codes and behavior standards."
+      }
+    ]
   }
 ]
