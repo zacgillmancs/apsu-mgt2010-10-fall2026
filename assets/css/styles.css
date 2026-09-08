@@ -477,6 +477,46 @@ img { max-width: 100%; display: block; }
   cursor: not-allowed;
 }
 
+/* ---------- Admin page ---------- */
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-toolbar .apply-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
+
+.table-scroll { overflow-x: auto; }
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 720px;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.admin-table th {
+  background: #f3f6fb;
+  color: var(--brand-dark);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.admin-table tbody tr:hover { background: #fafbfd; }
+
 /* ---------- Org chart ---------- */
 .org-chart {
   display: flex;

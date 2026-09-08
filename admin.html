@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin — Class Job Board</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JB</span>
+        Class Job Board
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Find Jobs</a>
+        <a href="index.html#companies">Companies</a>
+      </nav>
+      <div class="course-tag">MGT 2010</div>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 class="section-title">Applications (Admin)</h1>
+
+    <div id="admin-gate" class="card-block">
+      <p>Enter the admin password to view submitted applications.</p>
+      <form id="admin-login-form" class="apply-form" style="max-width: 320px">
+        <label>
+          Password
+          <input type="password" id="admin-password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" class="apply-btn">View Applications</button>
+        <p id="admin-login-status" class="apply-status apply-status-error" hidden></p>
+      </form>
+    </div>
+
+    <div id="admin-results" class="card-block" hidden>
+      <div class="admin-toolbar">
+        <p id="admin-count" class="result-count"></p>
+        <button id="admin-refresh" class="apply-btn">Refresh</button>
+      </div>
+      <div class="table-scroll">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Submitted</th>
+              <th>Applicant</th>
+              <th>Contact</th>
+              <th>Company</th>
+              <th>Job</th>
+              <th>Availability</th>
+              <th>Why a good fit</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Built for MGT 2010 · Companies and jobs are added throughout the semester.
+  </footer>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

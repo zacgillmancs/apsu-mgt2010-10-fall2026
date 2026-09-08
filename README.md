@@ -111,11 +111,30 @@ backend or database to run. This only works on the site's **Netlify** deploy
 (Netlify scans the site at build time to register the form); a GitHub Pages
 copy of the same files will show the form but submissions won't go anywhere.
 
-**Viewing submissions (admin view):** log in to the Netlify dashboard for this
-site → **Forms** tab. Every application shows up there as "job-application",
-with hidden fields `job-id`, `job-title`, and `company` on each submission so
-you can tell which posting it's for. You can export everything to CSV from
-that same tab.
+**Viewing submissions:** Netlify's own dashboard → **Forms** tab always has
+every submission (exportable to CSV) as a fallback. There's also a built-in
+admin page at **`/admin`** on the site that lists every application in a
+table (name, contact info, company, job, availability, and their message)
+behind a password — no need to log in to Netlify at all for day-to-day use.
+
+### One-time setup for `/admin`
+
+`/admin` is a static page that calls a small serverless function
+(`netlify/functions/submissions.js`) to fetch submissions from Netlify's API.
+The function keeps your Netlify API token out of the page source — it never
+reaches the browser. To turn it on, set three environment variables in the
+Netlify dashboard for this site (**Site configuration → Environment
+variables → Add a variable**):
+
+| Variable | Where to get it |
+| --- | --- |
+| `NETLIFY_API_TOKEN` | Netlify **User settings → Applications → Personal access tokens → New access token**. Treat it like a password — never commit it to the repo. |
+| `NETLIFY_SITE_ID` | This site's **Site configuration → General → Site details → Site ID**. |
+| `ADMIN_PASSWORD` | Any password you choose — this is what you'll type at `/admin` to view applications. Pick something non-trivial; anyone with it can see applicant names/emails. |
+
+After adding the variables, trigger a new deploy (Netlify only picks up new
+environment variables on the next build) — then `/admin` will prompt for the
+password and show the table.
 
 ## Roadmap (not built yet)
 
