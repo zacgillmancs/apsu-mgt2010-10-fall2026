@@ -1,0 +1,464 @@
+:root {
+  --brand: #2557a7;
+  --brand-dark: #164081;
+  --ink: #2d2d2d;
+  --ink-soft: #595959;
+  --line: #e2e2e2;
+  --bg: #f8f8f8;
+  --card: #ffffff;
+  --good: #2e7d32;
+  --radius: 8px;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.45;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--brand);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.site-header .header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.brand .brand-mark {
+  background: #fff;
+  color: var(--brand);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: #eaf1ff;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.course-tag {
+  font-size: 0.75rem;
+  color: #cfe0ff;
+  text-align: right;
+}
+
+/* ---------- Hero / search ---------- */
+.hero {
+  background: var(--brand);
+  color: #fff;
+  padding: 1.5rem 1rem 2.25rem;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.6rem;
+}
+
+.hero p {
+  margin: 0 0 1.1rem;
+  color: #dfe9ff;
+  max-width: 60ch;
+}
+
+.search-bar {
+  background: #fff;
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+
+.search-bar input {
+  flex: 1 1 200px;
+  border: none;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  color: var(--ink);
+  min-width: 0;
+}
+
+.search-bar input:focus { outline: 2px solid var(--brand); outline-offset: -2px; }
+
+.search-bar button {
+  flex: 0 0 auto;
+  background: var(--good);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-bar button:hover { background: #256428; }
+
+/* ---------- Layout ---------- */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  margin: 0 0 0.9rem;
+  color: var(--ink);
+}
+
+.result-count {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Job cards ---------- */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.job-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-color: #c9d8ef;
+}
+
+.job-card-top { display: flex; gap: 0.85rem; }
+
+.job-card-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.job-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+  margin: 0 0 0.15rem;
+}
+
+.job-meta {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.tag {
+  background: #eef3fb;
+  color: var(--brand-dark);
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+}
+
+.job-snippet {
+  margin: 0.6rem 0 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background: var(--brand);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn[disabled] {
+  background: #cfd8e3;
+  color: #6b7684;
+  cursor: not-allowed;
+}
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  background: var(--card);
+  border: 1px dashed #c7d3e6;
+  border-radius: var(--radius);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.empty-state .emoji { font-size: 1.8rem; display: block; margin-bottom: 0.5rem; }
+
+/* ---------- Company cards (homepage directory) ---------- */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.company-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  transition: box-shadow 0.15s ease;
+}
+
+.company-card:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+
+.company-card img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.company-card .cname { font-weight: 700; color: var(--brand-dark); }
+
+.company-card .cindustry { font-size: 0.82rem; color: var(--ink-soft); }
+
+/* ---------- Company profile page ---------- */
+.company-hero {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.company-hero img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.company-hero-info { flex: 1 1 260px; }
+
+.company-hero-info h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
+
+.company-hero-info .industry {
+  display: inline-block;
+  background: #eef3fb;
+  color: var(--brand-dark);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.company-hero-info .tagline {
+  color: var(--ink-soft);
+  font-style: italic;
+  margin: 0.25rem 0 0;
+}
+
+.card-block {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.card-block h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.6rem;
+}
+
+.service-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+
+/* ---------- Org chart ---------- */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.org-tier {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.org-tier + .org-tier { margin-top: 2.25rem; }
+
+.org-connector {
+  width: 2px;
+  height: 1.5rem;
+  background: #b9c7de;
+  margin: 0 auto;
+}
+
+.org-tier.tier-2::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 18%;
+  right: 18%;
+  height: 2px;
+  background: #b9c7de;
+}
+
+.org-tier.tier-2 .org-card::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  width: 2px;
+  height: 1.5rem;
+  background: #b9c7de;
+}
+
+.org-card {
+  position: relative;
+  background: #fbfcfe;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  width: 210px;
+  text-align: center;
+}
+
+.org-card.top {
+  border-color: var(--brand);
+  background: #eef3fb;
+  width: 230px;
+}
+
+.org-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  font-size: 1.1rem;
+}
+
+.org-card .name { font-weight: 700; margin: 0; }
+.org-card .title { color: var(--brand-dark); font-size: 0.85rem; margin: 0.15rem 0 0.4rem; }
+.org-card .desc { font-size: 0.8rem; color: var(--ink-soft); margin: 0; }
+
+.team-note {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--brand-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .company-hero { flex-direction: column; text-align: center; }
+  .company-hero-info { text-align: center; }
+  .org-tier.tier-2::before { left: 10%; right: 10%; }
+}

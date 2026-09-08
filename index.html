@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class Job Board — MGT 2010</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JB</span>
+        Class Job Board
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Find Jobs</a>
+        <a href="index.html#companies">Companies</a>
+      </nav>
+      <div class="course-tag">MGT 2010 · Business Simulation</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Find your next simulation job</h1>
+      <p>Browse open positions posted by student-run companies in the MGT 2010 business simulation.</p>
+      <form id="search-form" class="search-bar">
+        <input id="search-input" type="text" placeholder="Job title, company, or keyword" aria-label="Search jobs" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <main class="page">
+    <p id="result-count" class="result-count"></p>
+    <div id="job-list" class="job-list"></div>
+
+    <div id="companies" style="margin-top: 2.5rem;">
+      <h2 class="section-title">Companies Hiring</h2>
+      <div id="company-grid" class="company-grid"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Built for the MGT 2010 business simulation · Companies and jobs are added throughout the semester.
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

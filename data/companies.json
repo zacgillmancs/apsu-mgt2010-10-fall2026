@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "seedbank",
+    "name": "SeedBank",
+    "logo": "assets/logos/seedbank.jpg",
+    "industry": "Retail — Lawn Care & Landscaping",
+    "tagline": "Growing better lawns. Building stronger communities.",
+    "services": ["Mowing", "Trimming", "Edging", "Cleanup", "Care"],
+    "description": "SeedBank is a lawn care and landscaping company that provides reliable lawn maintenance services, including mowing, trimming, edging, cleanup, and general yard care for residential and commercial customers.",
+    "team": [
+      {
+        "id": "cesar",
+        "name": "Cesar",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees the overall business, coordinates the team, makes major business decisions, schedules jobs, and ensures customers receive quality service."
+      },
+      {
+        "id": "weston",
+        "name": "Weston",
+        "title": "Finance & Accounting Manager",
+        "level": 2,
+        "reportsTo": "cesar",
+        "description": "Manages the company’s budget, tracks revenue and expenses, prepares financial records, handles billing, and helps determine pricing for services."
+      },
+      {
+        "id": "tshawn",
+        "name": "Tshawn",
+        "title": "Marketing & Sales Coordinator",
+        "level": 2,
+        "reportsTo": "cesar",
+        "description": "Promotes SeedBank, manages advertising and social media, finds potential customers, develops promotions, and helps generate new business."
+      },
+      {
+        "id": "colton",
+        "name": "Colton",
+        "title": "Operations Manager",
+        "level": 2,
+        "reportsTo": "cesar",
+        "description": "Oversees lawn care jobs, equipment, and supplies. Makes sure mowing, trimming, edging, and cleanup services are completed efficiently and meet quality standards."
+      }
+    ]
+  }
+]
