@@ -67,24 +67,33 @@ Add an object to `data/companies.json`:
 
 ## Adding a job posting
 
-Add an object to `data/jobs.json`:
+All job postings share the same standardized template so they look
+consistent from company to company. Add an object to `data/jobs.json`:
 
 ```json
 {
   "id": "unique-job-id",
   "companySlug": "unique-url-friendly-id",
   "title": "Job Title",
-  "location": "City, ST",
-  "type": "Part-time",
-  "pay": "$12/hr",
-  "summary": "One or two sentence summary shown on the job card.",
-  "description": "Full job description.",
-  "responsibilities": ["Task one", "Task two"],
-  "requirements": ["Requirement one", "Requirement two"]
+  "department": "Department name",
+  "reportsTo": "Manager Name, Manager Title",
+  "location": "City, ST (optional)",
+  "type": "Part-Time / Full-Time (optional)",
+  "pay": "$12 - $15/hr (optional)",
+  "summary": "One or two sentence job summary.",
+  "responsibilities": ["Key responsibility one", "Key responsibility two"],
+  "requiredQualifications": ["Required qualification one", "Required qualification two"],
+  "preferredQualifications": ["Preferred qualification one (optional)"],
+  "benefits": ["Compensation & benefits bullet (optional)"],
+  "whyJoinUs": "Short pitch for why someone should apply (optional)."
 }
 ```
 
-The job will show up in the homepage search results and on its company's page.
+Only `id`, `companySlug`, `title`, and `summary` are required — every other
+field is optional and simply won't render its section if left out, so
+postings with less information (e.g. no listed pay or benefits) still look
+clean. The job will show up as a card in the homepage search results and as
+a full standardized posting on its company's page.
 
 ## Roadmap (not built yet)
 

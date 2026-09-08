@@ -15,7 +15,7 @@ function companyBySlug(companies, slug) {
 }
 
 function jobCardHTML(job, company) {
-  const tags = [job.type, job.pay, job.location].filter(Boolean);
+  const tags = [job.department, job.type, job.pay, job.location].filter(Boolean);
   return `
     <article class="job-card">
       <div class="job-card-top">
@@ -27,7 +27,43 @@ function jobCardHTML(job, company) {
       </div>
       ${tags.length ? `<div class="job-tags">${tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>` : ""}
       ${job.summary ? `<p class="job-snippet">${job.summary}</p>` : ""}
-      <a href="company.html?slug=${job.companySlug}#job-${job.id}"><button class="apply-btn">View & Apply</button></a>
+      <a href="company.html?slug=${job.companySlug}#job-${job.id}"><button class="apply-btn">View Details</button></a>
+    </article>
+  `;
+}
+
+function jobBulletsHTML(heading, items) {
+  if (!items || !items.length) return "";
+  return `
+    <div class="job-section">
+      <h4>${heading}</h4>
+      <ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul>
+    </div>
+  `;
+}
+
+function jobDetailHTML(job, company) {
+  const metaParts = [
+    job.department,
+    job.reportsTo ? `Reports to: ${job.reportsTo}` : null,
+    job.location,
+    job.type,
+    job.pay,
+  ].filter(Boolean);
+
+  return `
+    <article class="job-detail" id="job-${job.id}">
+      <div class="job-detail-head">
+        <h3 class="job-detail-title">${job.title}</h3>
+        ${metaParts.length ? `<p class="job-detail-meta">${metaParts.join(" · ")}</p>` : ""}
+      </div>
+      ${job.summary ? `<div class="job-section"><h4>Job Summary</h4><p>${job.summary}</p></div>` : ""}
+      ${jobBulletsHTML("Key Responsibilities", job.responsibilities)}
+      ${jobBulletsHTML("Required Qualifications", job.requiredQualifications)}
+      ${jobBulletsHTML("Preferred Qualifications", job.preferredQualifications)}
+      ${jobBulletsHTML("Compensation & Benefits", job.benefits)}
+      ${job.whyJoinUs ? `<div class="job-section"><h4>Why Join Us?</h4><p>${job.whyJoinUs}</p></div>` : ""}
+      <button class="apply-btn" disabled title="Applications open later this semester">Applications Open Soon</button>
     </article>
   `;
 }
@@ -172,11 +208,7 @@ async function initCompanyPage() {
     <h2>Open Positions at ${company.name}</h2>
     ${
       companyJobs.length
-        ? `<div class="job-list">${companyJobs
-            .map(
-              (j) => `<div id="job-${j.id}">${jobCardHTML(j, company)}</div>`
-            )
-            .join("")}</div>`
+        ? `<div class="job-detail-list">${companyJobs.map((j) => jobDetailHTML(j, company)).join("")}</div>`
         : emptyStateHTML("No open positions posted yet.")
     }
   `;

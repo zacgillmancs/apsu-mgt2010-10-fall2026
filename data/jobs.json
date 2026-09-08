@@ -1,1 +1,85 @@
-[]
+[
+  {
+    "id": "seedbank-field-agent",
+    "companySlug": "seedbank",
+    "title": "Field Agent",
+    "department": "Operations",
+    "reportsTo": "Colton, Operations Manager",
+    "summary": "Get hands-on with yard work out in the field, providing mowing, trimming, edging, and other lawn care services directly to SeedBank customers.",
+    "responsibilities": [
+      "Find and connect with potential new customers while out in the field",
+      "Provide satisfying yard work services, including mowing, trimming, and more",
+      "Take proper care of equipment",
+      "Respond to jobs and complete work in a timely manner",
+      "Follow proper safety procedures on every job"
+    ],
+    "requiredQualifications": [
+      "Experience operating lawn care equipment",
+      "Valid driver's license",
+      "Must be at least 16 years old"
+    ],
+    "preferredQualifications": [
+      "18 years of age or older",
+      "Strong knowledge and hands-on experience with lawn care equipment"
+    ],
+    "benefits": ["Free food", "Free gas while on the job", "Workers' compensation"],
+    "whyJoinUs": "To make your world better, one yard at a time. It's easy to apply, and SeedBank has a higher chance of getting you hired fast."
+  },
+  {
+    "id": "bleuroom-cook-dishwasher",
+    "companySlug": "bleu-room",
+    "title": "Cook / Dishwasher",
+    "department": "Kitchen",
+    "reportsTo": "Marcus Spinks, General Manager",
+    "location": "Clarksville, TN 37040",
+    "type": "Part-Time / Full-Time",
+    "pay": "$12 - $15 an hour",
+    "summary": "We are looking for a dedicated and skilled cook to join us in preparing great food for our customers. The ideal candidate is passionate about food preparation and has some knowledge and experience in cooking.",
+    "responsibilities": [
+      "Prepare ingredients for cooking",
+      "Follow food safety guidelines to maintain a clean kitchen environment",
+      "Ensure all food is prepared according to recipes and meets our taste standards",
+      "Maintain proper food handling techniques to prevent contamination",
+      "Work with other kitchen staff to meet demand during peak hours",
+      "Clean and sanitize work areas, utensils, and equipment after each use"
+    ],
+    "requiredQualifications": [
+      "Previous experience as a cook is preferred",
+      "Proficient knife skills and ability to safely use kitchen equipment",
+      "Strong organizational skills and the ability to multitask effectively in a fast-paced environment",
+      "Knowledge of food safety regulations and practices for food handling",
+      "Willingness to work in a team setting"
+    ]
+  },
+  {
+    "id": "bubblesandbarks-mobile-groomer",
+    "companySlug": "bubbles-and-barks",
+    "title": "Mobile Dog Groomer",
+    "department": "Grooming Services",
+    "reportsTo": "Addy Hofmans, Sales Manager",
+    "pay": "$12/hour + 5% commission and tips",
+    "summary": "Bubbles & Barks is hiring its tenth groomer to complete staffing for five mobile grooming vans. The groomer will travel to scheduled appointments and provide friendly, careful dog washing and grooming services. Each operating van has two workers for safety, combining hands-on pet care, customer service, and daily upkeep of the mobile workspace.",
+    "responsibilities": [
+      "Bathe, dry, brush, trim coats, and trim nails according to customer requests and each dog's needs",
+      "Work with a second groomer to handle dogs safely; complete company-provided aggressive-dog handling training and follow safe handling procedures",
+      "Confirm service requests with owners, record grooming preferences, and report concerns or unsafe situations to the Sales Manager",
+      "Clean and sanitize tools and the van between appointments; restock supplies and check water levels and equipment",
+      "Drive the company van as assigned, follow the appointment route, and communicate delays or maintenance needs promptly"
+    ],
+    "requiredQualifications": [
+      "Pet-friendly, patient, and committed to gentle, safe animal care",
+      "Able to safely lift up to 50 pounds, with assistance or reasonable accommodation as needed",
+      "Valid driver's license"
+    ],
+    "preferredQualifications": [
+      "One to two years of dog grooming experience",
+      "High school diploma or equivalent"
+    ],
+    "benefits": [
+      "$12 per hour plus 5% commission and tips",
+      "Flexible hours, including scheduled evening and weekend appointments",
+      "Quarterly raises based on performance and opportunities for growth within the company"
+    ],
+    "whyJoinUs": "Join a pet-friendly team that brings convenient grooming directly to dog owners. Work alongside a partner in a mobile setting, build your grooming skills through training, and grow with Bubbles & Barks as we complete staffing for our five-van fleet."
+  }
+]
