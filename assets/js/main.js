@@ -417,12 +417,22 @@ function initStockSection(container, company, stockEntry) {
 }
 
 // ---------------- News ----------------
-function newsArticleHTML(article) {
+function articleSnippet(article) {
+  return article.body && article.body.length ? article.body[0] : "";
+}
+
+function newsByline(article) {
+  return `${article.outlet} · By ${article.author} · ${formatShortDate(article.date)}`;
+}
+
+function newsTeaserHTML(article) {
   return `
-    <article class="news-article">
-      <h3 class="news-headline">${article.headline}</h3>
-      <p class="news-meta">${formatShortDate(article.date)} · ${article.byline}</p>
-      ${article.body.map((p) => `<p>${p}</p>`).join("")}
+    <article class="news-teaser">
+      <p class="news-kicker">${article.outlet}</p>
+      <h3 class="news-headline"><a href="article.html?id=${article.id}">${article.headline}</a></h3>
+      <p class="news-meta">By ${article.author} · ${formatShortDate(article.date)}</p>
+      <p class="news-snippet">${articleSnippet(article)}</p>
+      <a class="news-read-more" href="article.html?id=${article.id}">Read full article &rarr;</a>
     </article>
   `;
 }
@@ -435,8 +445,89 @@ function initNewsSection(container, articles) {
   }
   container.innerHTML = `
     <h2>In the News</h2>
-    <div class="news-list">${articles.map(newsArticleHTML).join("")}</div>
+    <div class="news-list">${articles.map(newsTeaserHTML).join("")}</div>
   `;
+}
+
+function feedItemHTML(article, company) {
+  return `
+    <article class="feed-item">
+      <p class="news-kicker">${article.outlet}</p>
+      <h3 class="news-headline"><a href="article.html?id=${article.id}">${article.headline}</a></h3>
+      <p class="news-meta">
+        By ${article.author} · ${formatShortDate(article.date)}
+        ${company ? `· <a class="feed-company-link" href="company.html?slug=${company.slug}">${company.name}</a>` : ""}
+      </p>
+      <p class="news-snippet">${articleSnippet(article)}</p>
+      <a class="news-read-more" href="article.html?id=${article.id}">Read full article &rarr;</a>
+    </article>
+  `;
+}
+
+async function initNewsFeedPage() {
+  const feedEl = document.getElementById("news-feed");
+  if (!feedEl) return;
+
+  const { companies, news } = await loadData();
+  const sorted = [...news].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const countEl = document.getElementById("news-feed-count");
+  if (countEl) {
+    countEl.textContent = `${sorted.length} article${sorted.length === 1 ? "" : "s"}`;
+  }
+
+  feedEl.innerHTML = sorted.length
+    ? sorted.map((a) => feedItemHTML(a, companyBySlug(companies, a.companySlug))).join("")
+    : emptyStateHTML("No news articles yet.");
+}
+
+async function initArticlePage() {
+  const rootEl = document.getElementById("article-page");
+  if (!rootEl) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const articleId = params.get("id");
+  const { companies, news } = await loadData();
+  const article = news.find((a) => a.id === articleId);
+
+  if (!article) {
+    rootEl.innerHTML = emptyStateHTML("We couldn't find that article. Head back to the news feed.");
+    return;
+  }
+
+  const company = companyBySlug(companies, article.companySlug);
+  document.title = `${article.headline} — Class Job Board`;
+
+  document.getElementById("article-company-strip").innerHTML = company
+    ? `
+      <a class="job-company-strip-link" href="company.html?slug=${company.slug}">
+        <img src="${company.logo}" alt="${company.name} logo" />
+        <span>${company.name}</span>
+      </a>
+    `
+    : "";
+
+  document.getElementById("article-body").innerHTML = `
+    <p class="news-kicker">${article.outlet}</p>
+    <h1 class="news-headline">${article.headline}</h1>
+    <p class="news-meta">By ${article.author} · ${formatShortDate(article.date)}</p>
+    ${article.body.map((p) => `<p>${p}</p>`).join("")}
+  `;
+
+  const moreEl = document.getElementById("article-more");
+  if (moreEl && company) {
+    const more = news.filter((a) => a.companySlug === company.slug && a.id !== article.id);
+    if (more.length) {
+      moreEl.innerHTML = `
+        <h2>More from ${company.name}</h2>
+        <div class="news-list">${more.map(newsTeaserHTML).join("")}</div>
+      `;
+    } else {
+      moreEl.hidden = true;
+    }
+  } else if (moreEl) {
+    moreEl.hidden = true;
+  }
 }
 
 async function initCompanyPage() {
@@ -579,4 +670,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCompaniesPage();
   initCompanyPage();
   initJobPage();
+  initNewsFeedPage();
+  initArticlePage();
 });

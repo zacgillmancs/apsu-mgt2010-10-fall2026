@@ -37,6 +37,8 @@ index.html             Homepage — search bar, filters, and job listings
 companies.html          Company directory with an industry filter
 company.html            Company "About Us" template (reads ?slug=... from the URL)
 job.html                Job detail + application template (reads ?id=... from the URL)
+news.html               RSS-style feed of every news article, newest first
+article.html            Full article view (reads ?id=... from the URL)
 admin.html              Password-gated table of submitted applications
 data/companies.json     One entry per company (logo, description, team/org chart)
 data/jobs.json          One entry per job posting, tagged with a companySlug
@@ -150,16 +152,27 @@ Fictional news articles can be attached to any company via `data/news.json`:
   "companySlug": "unique-url-friendly-id",
   "headline": "Headline text",
   "date": "2026-09-09",
-  "byline": "MGT 2010 Business Wire",
+  "outlet": "Fictional outlet name, e.g. The Clarksville Ledger",
+  "author": "Fictional reporter name",
   "body": ["First paragraph.", "Second paragraph.", "..."]
 }
 ```
 
-Every company currently has one auto-generated "launch" article. Add more
-entries with the same `companySlug` (e.g., after a stock price update, a new
-product launch, or an award) and they'll show up under "In the News" at the
-bottom of that company's page, newest listed last — reorder the array if you
-want a different display order.
+Every company currently has one auto-generated "launch" article, each
+written by a different fictional outlet/reporter so the News page doesn't
+read like the same press release nine times. There are three places
+articles show up:
+
+- **`news.html`** — an RSS-style feed of every article across every company,
+  newest first, linked from the primary nav.
+- **A company's own page** — a linked teaser (headline, byline, snippet)
+  under "In the News" for just that company's articles.
+- **`article.html?id=...`** — the full article, plus a "More from
+  &lt;Company&gt;" list once a company has more than one.
+
+Add more entries with the same `companySlug` any time (e.g., after a stock
+price update, a new product launch, or an award) and they'll show up
+automatically in all three places — no need to touch any HTML.
 
 ## Applications
 

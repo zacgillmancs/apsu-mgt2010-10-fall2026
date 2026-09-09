@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Companies — Class Job Board</title>
+  <title>News — Class Job Board</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -15,23 +15,19 @@
       </a>
       <nav class="site-nav">
         <a href="index.html">Find Jobs</a>
-        <a href="companies.html" class="active">Companies</a>
-        <a href="news.html">News</a>
+        <a href="companies.html">Companies</a>
+        <a href="news.html" class="active">News</a>
       </nav>
       <div class="course-tag">MGT 2010</div>
     </div>
   </header>
 
   <main class="page">
-    <h1 class="section-title">Companies</h1>
-    <p class="page-subtitle">Browse every student-run company in MGT 2010 and see who's hiring.</p>
+    <h1 class="section-title">News</h1>
+    <p class="page-subtitle">Every article written about MGT 2010's student-run companies, newest first.</p>
+    <p id="news-feed-count" class="result-count"></p>
 
-    <div class="filter-bar">
-      <select id="company-filter-industry" aria-label="Filter by industry"></select>
-      <span id="company-result-count" class="result-count"></span>
-    </div>
-
-    <div id="company-grid" class="company-grid"></div>
+    <div id="news-feed" class="news-feed"></div>
   </main>
 
   <footer class="site-footer">
