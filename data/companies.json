@@ -324,5 +324,47 @@
         "description": "Develops the budget, tracks revenue and expenses, monitors cash flow, and helps control costs to maintain profitability."
       }
     ]
+  },
+  {
+    "slug": "natura-energy",
+    "name": "Natura Energy",
+    "logo": "assets/logos/natura-energy.svg",
+    "industry": "Beverage — Energy Drinks",
+    "tagline": "All Natural Energy Drink",
+    "services": ["All-Natural Energy Drinks"],
+    "description": "Natura Energy is an energy drink company devoted to supplying healthier, all-natural energy drinks to the public.",
+    "team": [
+      {
+        "id": "aniyah",
+        "name": "Aniyah",
+        "title": "Overseer",
+        "level": 1,
+        "description": "Oversees the entire business as the primary manager, ensuring operations run smoothly and the team stays aligned with company goals."
+      },
+      {
+        "id": "jodi",
+        "name": "Jodi Miller",
+        "title": "Marketing",
+        "level": 2,
+        "reportsTo": "aniyah",
+        "description": "Promotes Natura Energy through marketing campaigns and brand awareness efforts to help grow the company's customer base."
+      },
+      {
+        "id": "natalie",
+        "name": "Natalie",
+        "title": "HR / Customer Service",
+        "level": 2,
+        "reportsTo": "aniyah",
+        "description": "Manages human resources and customer service, supporting employees and ensuring customers have a positive experience with Natura Energy."
+      },
+      {
+        "id": "mia",
+        "name": "Mia",
+        "title": "Sales / Finance Manager",
+        "level": 2,
+        "reportsTo": "aniyah",
+        "description": "Oversees sales strategy and financial management, tracking revenue and expenses to support the company's growth."
+      }
+    ]
   }
 ]

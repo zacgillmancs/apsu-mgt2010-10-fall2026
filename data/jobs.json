@@ -143,5 +143,24 @@
       "Keep 100% of your own tips — not pooled"
     ],
     "whyJoinUs": "We're home to one of the only rock climbing gyms in Clarksville, TN, and can easily offer a better experience and better pay than our competitors."
+  },
+  {
+    "id": "natura-it-specialist-manager",
+    "companySlug": "natura-energy",
+    "title": "IT Specialist Manager",
+    "department": "IT",
+    "reportsTo": "Aniyah, Overseer",
+    "location": "Clarksville, TN 37043",
+    "summary": "Oversees daily IT operations and provides reliable technical support to our organization. Manages hardware, software, systems, network access, and security while assisting employees with technical issues and technology needs.",
+    "responsibilities": [
+      "Leads daily IT operations and technology systems",
+      "Installs, configures, maintains, and updates computers, software, and other technology",
+      "Manages user accounts, system access, equipment, and IT security",
+      "Provides technical support and troubleshoots hardware, software, and network issues"
+    ],
+    "requiredQualifications": [
+      "Professional certification in the field of Information Technology",
+      "Minimum of 2 years of relevant experience required"
+    ]
   }
 ]
