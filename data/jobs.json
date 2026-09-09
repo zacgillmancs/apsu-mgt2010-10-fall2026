@@ -113,5 +113,35 @@
     ],
     "benefits": ["Health insurance", "Free or discounted products"],
     "whyJoinUs": "Join us to help support natural-based products. We're a new business with big hopes of becoming one of the world's largest health and beauty companies, made up of determined, hardworking people who genuinely care about each other and our mission to make health and beauty care environmentally friendly."
+  },
+  {
+    "id": "stoneage-trainer",
+    "companySlug": "stone-age",
+    "title": "Trainer",
+    "department": "Training",
+    "reportsTo": "Robert Simons, General Manager",
+    "pay": "$20/hour (full-time)",
+    "summary": "Lead multiple groups in training daily to teach anyone interested in climbing, whether they're beginners, intermediate, or pro, improving the overall quality of our members and their skills.",
+    "responsibilities": [
+      "Train beginners on using climbing equipment: belay, harnesses, grigri, safety, and tying knots",
+      "Maintain the training zones",
+      "Ensure all members are safe",
+      "Set up training routes for different skill levels, and change the routes monthly"
+    ],
+    "requiredQualifications": [
+      "Belay certified",
+      "Climbing rescue certified",
+      "Climbing experience"
+    ],
+    "preferredQualifications": [
+      "Minimum age 18",
+      "Able to stand 8+ hours a day"
+    ],
+    "benefits": [
+      "401(k) retirement plan (full-time)",
+      "Health, dental, and life insurance (full-time)",
+      "Keep 100% of your own tips — not pooled"
+    ],
+    "whyJoinUs": "We're home to one of the only rock climbing gyms in Clarksville, TN, and can easily offer a better experience and better pay than our competitors."
   }
 ]
