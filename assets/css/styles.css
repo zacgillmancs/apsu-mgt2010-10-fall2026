@@ -169,6 +169,50 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1rem;
 }
 
+.page-subtitle {
+  color: var(--ink-soft);
+  margin: -0.75rem 0 1.25rem;
+}
+
+/* ---------- Filter bar ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.filter-bar select {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  min-width: 160px;
+}
+
+.filter-bar select:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: -1px;
+}
+
+.filter-clear-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  color: var(--brand-dark);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 0.25rem;
+}
+
+.filter-clear-btn:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Job cards ---------- */
 .job-list {
   display: flex;
@@ -619,8 +663,158 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
 }
 
+/* ---------- Stock ticker ---------- */
+.stock-card { background: #fff; }
+
+.stock-head h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stock-ticker {
+  background: #eef3fb;
+  color: var(--brand-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+}
+
+.stock-subtitle {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.stock-price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.stock-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.stock-currency {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.stock-change-badge {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.stock-change-badge.up { background: #e6f4ea; color: #1e8e3e; }
+.stock-change-badge.down { background: #fce8e6; color: #d93025; }
+.stock-change-badge.new-listing { background: #eef3fb; color: var(--brand-dark); }
+
+.stock-change-abs { font-size: 0.9rem; font-weight: 600; }
+.stock-change-abs.up { color: #1e8e3e; }
+.stock-change-abs.down { color: #d93025; }
+
+.stock-asof {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.stock-range-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.75rem;
+}
+
+.stock-range-tabs button {
+  font: inherit;
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0.7rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.stock-range-tabs button:hover { color: var(--brand-dark); }
+
+.stock-range-tabs button.active {
+  color: var(--brand-dark);
+  border-bottom-color: var(--brand);
+}
+
+.stock-chart-wrap { width: 100%; }
+
+.stock-chart-svg { width: 100%; height: auto; display: block; }
+
+.chart-axis-label {
+  font-size: 11px;
+  fill: var(--ink-soft);
+  font-family: inherit;
+}
+
+.stock-note {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background: #f6f8fb;
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+}
+
+/* ---------- News ---------- */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-article + .news-article {
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+}
+
+.news-headline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem;
+  color: var(--ink);
+}
+
+.news-meta {
+  margin: 0 0 0.7rem;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.news-article p {
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+}
+
+.news-article p:last-child { margin-bottom: 0; }
+
 @media (max-width: 480px) {
   .company-hero { flex-direction: column; text-align: center; }
   .company-hero-info { text-align: center; }
   .org-tier.tier-2::before { left: 10%; right: 10%; }
+  .stock-price { font-size: 1.6rem; }
 }

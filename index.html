@@ -15,7 +15,7 @@
       </a>
       <nav class="site-nav">
         <a href="index.html" class="active">Find Jobs</a>
-        <a href="index.html#companies">Companies</a>
+        <a href="companies.html">Companies</a>
       </nav>
       <div class="course-tag">MGT 2010</div>
     </div>
@@ -33,13 +33,15 @@
   </section>
 
   <main class="page">
+    <div class="filter-bar">
+      <select id="filter-industry" aria-label="Filter by industry"></select>
+      <select id="filter-type" aria-label="Filter by job type"></select>
+      <select id="filter-company" aria-label="Filter by company"></select>
+      <button type="button" id="filter-clear" class="filter-clear-btn">Clear filters</button>
+    </div>
+
     <p id="result-count" class="result-count"></p>
     <div id="job-list" class="job-list"></div>
-
-    <div id="companies" style="margin-top: 2.5rem;">
-      <h2 class="section-title">Companies Hiring</h2>
-      <div id="company-grid" class="company-grid"></div>
-    </div>
   </main>
 
   <footer class="site-footer">

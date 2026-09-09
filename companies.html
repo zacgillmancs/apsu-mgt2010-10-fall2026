@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Company — Class Job Board</title>
+  <title>Companies — Class Job Board</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -15,26 +15,22 @@
       </a>
       <nav class="site-nav">
         <a href="index.html">Find Jobs</a>
-        <a href="companies.html">Companies</a>
+        <a href="companies.html" class="active">Companies</a>
       </nav>
       <div class="course-tag">MGT 2010</div>
     </div>
   </header>
 
-  <main class="page" id="company-page">
-    <a class="back-link" href="index.html">&larr; Back to Job Board</a>
+  <main class="page">
+    <h1 class="section-title">Companies</h1>
+    <p class="page-subtitle">Browse every student-run company in MGT 2010 and see who's hiring.</p>
 
-    <div id="company-hero" class="company-hero"></div>
+    <div class="filter-bar">
+      <select id="company-filter-industry" aria-label="Filter by industry"></select>
+      <span id="company-result-count" class="result-count"></span>
+    </div>
 
-    <section id="company-about" class="card-block"></section>
-
-    <section id="company-stock" class="card-block stock-card"></section>
-
-    <section id="company-team" class="card-block"></section>
-
-    <section id="company-jobs" class="card-block"></section>
-
-    <section id="company-news" class="card-block"></section>
+    <div id="company-grid" class="company-grid"></div>
   </main>
 
   <footer class="site-footer">

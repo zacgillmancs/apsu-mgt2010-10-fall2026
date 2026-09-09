@@ -1,0 +1,11 @@
+[
+  { "companySlug": "seedbank", "ticker": "SEED", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "bleu-room", "ticker": "BLEU", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "bubbles-and-barks", "ticker": "BARK", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "pease-beez", "ticker": "BEEZ", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "stone-age", "ticker": "CRAG", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "crosshairs-and-scriptures", "ticker": "AMEN", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "coffee-trip", "ticker": "JAVA", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "frontier-kitchen", "ticker": "GRUB", "history": [{ "date": "2026-09-09", "price": 15.00 }] },
+  { "companySlug": "natura-energy", "ticker": "VOLT", "history": [{ "date": "2026-09-09", "price": 15.00 }] }
+]

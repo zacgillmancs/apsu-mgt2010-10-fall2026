@@ -33,13 +33,18 @@ blocks the `fetch()` calls that load the JSON data over the `file://` protocol.)
 ## How the site is organized
 
 ```
-index.html            Homepage — search bar + job listings + company directory
-company.html           Company "About Us" template (reads ?slug=... from the URL)
-data/companies.json    One entry per company (logo, description, team/org chart)
-data/jobs.json         One entry per job posting, tagged with a companySlug
-assets/logos/          Company logo image files
-assets/css/styles.css  All styling
-assets/js/main.js      Loads the JSON and renders both pages
+index.html             Homepage — search bar, filters, and job listings
+companies.html          Company directory with an industry filter
+company.html            Company "About Us" template (reads ?slug=... from the URL)
+job.html                Job detail + application template (reads ?id=... from the URL)
+admin.html              Password-gated table of submitted applications
+data/companies.json     One entry per company (logo, description, team/org chart)
+data/jobs.json          One entry per job posting, tagged with a companySlug
+data/stocks.json        One entry per company's simulated stock (ticker + price history)
+data/news.json          Fictional news articles, tagged with a companySlug
+assets/logos/           Company logo image files
+assets/css/styles.css   All styling
+assets/js/main.js       Loads the JSON and renders every page
 ```
 
 Nothing is hardcoded into the HTML — add a company or a job by editing the
@@ -69,7 +74,7 @@ Add an object to `data/companies.json`:
   manager/owner). Everyone else should be `level: 2` and will be drawn as
   peers reporting up to the top box.
 - Drop the logo image file in `assets/logos/`.
-- The company will automatically appear on the homepage directory and get its
+- The company will automatically appear on the **Companies** page and get its
   own page at `company.html?slug=unique-url-friendly-id`.
 
 ## Adding a job posting
@@ -101,6 +106,60 @@ field is optional and simply won't render its section if left out, so
 postings with less information (e.g. no listed pay or benefits) still look
 clean. The job will show up as a card in the homepage search results and as
 a full standardized posting on its company's page.
+
+Job listings on the homepage can be filtered by industry (from the
+company's `industry` field), job type, and company. The type filter options
+are built by splitting every job's `type` value on `/` — so a job typed
+`"Part-Time / Full-Time"` shows up under both the "Part-Time" and "Full-Time"
+filter options automatically.
+
+## Stock ticker
+
+Every company gets a simulated stock on its profile page, styled after
+Google's stock cards — ticker, price, up/down change, and a chart with
+1D/5D/1M/6M/YTD/1Y/5Y/Max range tabs. It's driven by `data/stocks.json`:
+
+```json
+{
+  "companySlug": "unique-url-friendly-id",
+  "ticker": "ABCD",
+  "history": [
+    { "date": "2026-09-09", "price": 15.00 },
+    { "date": "2026-10-01", "price": 16.25 }
+  ]
+}
+```
+
+Every company starts at **$15.00/share** with a single history entry (its
+"IPO"). **To move a company's valuation** (e.g., after a team makes a good or
+bad business decision), just append a new `{ "date": ..., "price": ... }`
+entry to that company's `history` array — the chart, current price, and
+percent change all update automatically from whatever the most recent two
+entries are. Since updates are added by hand rather than streamed in real
+time, the range tabs filter by how old each entry is relative to the latest
+one, not by intraday ticks — with only one or two entries so far, most tabs
+will look the same until more price history builds up over the semester.
+
+## News
+
+Fictional news articles can be attached to any company via `data/news.json`:
+
+```json
+{
+  "id": "unique-article-id",
+  "companySlug": "unique-url-friendly-id",
+  "headline": "Headline text",
+  "date": "2026-09-09",
+  "byline": "MGT 2010 Business Wire",
+  "body": ["First paragraph.", "Second paragraph.", "..."]
+}
+```
+
+Every company currently has one auto-generated "launch" article. Add more
+entries with the same `companySlug` (e.g., after a stock price update, a new
+product launch, or an award) and they'll show up under "In the News" at the
+bottom of that company's page, newest listed last — reorder the array if you
+want a different display order.
 
 ## Applications
 
@@ -135,9 +194,3 @@ variables → Add a variable**):
 After adding the variables, trigger a new deploy (Netlify only picks up new
 environment variables on the next build) — then `/admin` will prompt for the
 password and show the table.
-
-## Roadmap (not built yet)
-
-- **Stock ticker / performance metrics:** planned as another JSON-driven
-  section (e.g., `data/metrics.json`) rendered on the homepage or company
-  pages.
