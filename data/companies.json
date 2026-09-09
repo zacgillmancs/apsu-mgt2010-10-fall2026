@@ -283,5 +283,46 @@
         "description": "Ensures the business reaches the right audience with advertisements and campaigns aligned with its goals."
       }
     ]
+  },
+  {
+    "slug": "frontier-kitchen",
+    "name": "Frontier Kitchen",
+    "logo": "assets/logos/frontier-kitchen.svg",
+    "industry": "Restaurant / Food Service — Hospitality",
+    "tagline": "Est. 2024",
+    "description": "Frontier Kitchen is a restaurant and food service business built around strong daily operations, a customer-focused team, and a memorable menu and brand experience for guests.",
+    "team": [
+      {
+        "id": "maddy",
+        "name": "Maddy Kosturko",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees daily restaurant operations as the primary manager, assigns tasks, coordinates staff schedules, and ensures the team meets business goals and customer service standards."
+      },
+      {
+        "id": "freddy",
+        "name": "Freddy Monroe",
+        "title": "Sales Manager",
+        "level": 2,
+        "reportsTo": "maddy",
+        "description": "Sets sales goals, tracks restaurant sales, trains staff on menu recommendations, and develops strategies to increase orders and encourage repeat visits."
+      },
+      {
+        "id": "truman",
+        "name": "Truman Gill",
+        "title": "Marketing Manager",
+        "level": 2,
+        "reportsTo": "maddy",
+        "description": "Manages social media, creates advertising campaigns, promotes menu items and special events, and maintains the restaurant's brand identity."
+      },
+      {
+        "id": "troy",
+        "name": "Troy",
+        "title": "Finance Manager",
+        "level": 2,
+        "reportsTo": "maddy",
+        "description": "Develops the budget, tracks revenue and expenses, monitors cash flow, and helps control costs to maintain profitability."
+      }
+    ]
   }
 ]
