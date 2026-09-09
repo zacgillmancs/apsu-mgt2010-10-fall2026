@@ -165,5 +165,47 @@
         "description": "Oversees product development and quality for Pease Beez's honey-based goods, from formulation through production standards."
       }
     ]
+  },
+  {
+    "slug": "stone-age",
+    "name": "Stone Age Climbing & Fitness",
+    "logo": "assets/logos/stone-age.svg",
+    "industry": "Fitness — Rock Climbing Gym",
+    "tagline": "Stronger by Nature.",
+    "services": ["Rock Climbing", "Strength Training", "Fitness Gym"],
+    "description": "Stone Age Climbing & Fitness provides a safe learning environment for beginners and a challenge for pros. We offer rock climbing, strength training, and a full fitness gym for the community — regardless of who you are. Our goal is to create a community that cares for and challenges each other, and becomes Stronger by Nature.",
+    "team": [
+      {
+        "id": "robert",
+        "name": "Robert Simons",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees the entire gym as the primary manager, ensuring the business runs smoothly, safely, and effectively."
+      },
+      {
+        "id": "bailey",
+        "name": "Bailey Battles",
+        "title": "Marketing Manager",
+        "level": 2,
+        "reportsTo": "robert",
+        "description": "Promotes Stone Age Climbing & Fitness, attracting new members and keeping current members engaged in the gym."
+      },
+      {
+        "id": "kale",
+        "name": "Kale Patterson",
+        "title": "Storekeeper",
+        "level": 2,
+        "reportsTo": "robert",
+        "description": "Works mainly in the store, handling merchandise and gym equipment sales."
+      },
+      {
+        "id": "traden",
+        "name": "Traden Lundrigan",
+        "title": "Financial Advisor",
+        "level": 2,
+        "reportsTo": "robert",
+        "description": "Organizes and allocates funding for different aspects of the business, and files and reports all necessary information based on spending and profits."
+      }
+    ]
   }
 ]
