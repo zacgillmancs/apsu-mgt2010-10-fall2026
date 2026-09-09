@@ -124,5 +124,46 @@
         "description": "Sets up and maintains the online booking system, business devices, and payment technology. Troubleshoots technical problems, updates website service information, manages employee account access, performs software updates and data backups, and reports unresolved issues to Kristen."
       }
     ]
+  },
+  {
+    "slug": "pease-beez",
+    "name": "Pease Beez",
+    "logo": "assets/logos/pease-beez.svg",
+    "industry": "Health & Beauty",
+    "tagline": "Natural solutions for beauty and health care.",
+    "description": "Pease Beez makes hand-made products from homemade honey to promote natural, whole-body health. Our mission is to recreate the beauty and health industry in an ethical and humane way, guided by our values of being natural, simple, humane, and healthy.",
+    "team": [
+      {
+        "id": "emme",
+        "name": "Emme Dressler",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Serves as Pease Beez's primary manager, overseeing daily operations, coordinating the team, and making key business decisions to keep the company running smoothly."
+      },
+      {
+        "id": "tori",
+        "name": "Tori Ross",
+        "title": "Sales Manager",
+        "level": 2,
+        "reportsTo": "emme",
+        "description": "Manages customer relationships and sales channels, tracks orders, and works to grow revenue for Pease Beez's honey-based products."
+      },
+      {
+        "id": "ameila",
+        "name": "Ameila Pease",
+        "title": "Marketing Coordinator",
+        "level": 2,
+        "reportsTo": "emme",
+        "description": "Promotes Pease Beez through advertising and social media, and helps build awareness for the brand's natural health and beauty products."
+      },
+      {
+        "id": "major",
+        "name": "Major Peevyhouse",
+        "title": "Product Manager",
+        "level": 2,
+        "reportsTo": "emme",
+        "description": "Oversees product development and quality for Pease Beez's honey-based goods, from formulation through production standards."
+      }
+    ]
   }
 ]
