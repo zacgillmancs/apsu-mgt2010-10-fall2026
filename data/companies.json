@@ -128,7 +128,7 @@
   {
     "slug": "pease-beez",
     "name": "Pease Beez",
-    "logo": "assets/logos/pease-beez.svg",
+    "logo": "assets/logos/pease-beez.png",
     "industry": "Health & Beauty",
     "tagline": "Natural solutions for beauty and health care.",
     "description": "Pease Beez makes hand-made products from homemade honey to promote natural, whole-body health. Our mission is to recreate the beauty and health industry in an ethical and humane way, guided by our values of being natural, simple, humane, and healthy.",
@@ -169,7 +169,7 @@
   {
     "slug": "stone-age",
     "name": "Stone Age Climbing & Fitness",
-    "logo": "assets/logos/stone-age.svg",
+    "logo": "assets/logos/stone-age.png",
     "industry": "Fitness — Rock Climbing Gym",
     "tagline": "Stronger by Nature.",
     "services": ["Rock Climbing", "Strength Training", "Fitness Gym"],
@@ -211,7 +211,7 @@
   {
     "slug": "crosshairs-and-scriptures",
     "name": "Crosshairs & Scriptures",
-    "logo": "assets/logos/crosshairs-and-scriptures.svg",
+    "logo": "assets/logos/crosshairs-and-scriptures.png",
     "industry": "Apparel & Retail",
     "tagline": "Faith · Family · Outdoors",
     "services": ["Graphic T-Shirts", "Hats", "Apparel & Accessories"],
@@ -253,7 +253,7 @@
   {
     "slug": "coffee-trip",
     "name": "Coffee Trip",
-    "logo": "assets/logos/coffee-trip.svg",
+    "logo": "assets/logos/coffee-trip.png",
     "industry": "Mobile Food & Beverage Services",
     "tagline": "Coffee and baked goods, anywhere, anytime.",
     "services": ["Coffee", "Baked Goods", "Mobile Catering"],
@@ -287,7 +287,7 @@
   {
     "slug": "frontier-kitchen",
     "name": "Frontier Kitchen",
-    "logo": "assets/logos/frontier-kitchen.svg",
+    "logo": "assets/logos/frontier-kitchen.png",
     "industry": "Restaurant / Food Service — Hospitality",
     "tagline": "Est. 2024",
     "description": "Frontier Kitchen is a restaurant and food service business built around strong daily operations, a customer-focused team, and a memorable menu and brand experience for guests.",
@@ -328,7 +328,7 @@
   {
     "slug": "natura-energy",
     "name": "Natura Energy",
-    "logo": "assets/logos/natura-energy.svg",
+    "logo": "assets/logos/natura-energy.png",
     "industry": "Beverage — Energy Drinks",
     "tagline": "All Natural Energy Drink",
     "services": ["All-Natural Energy Drinks"],
