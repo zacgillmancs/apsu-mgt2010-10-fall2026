@@ -207,5 +207,47 @@
         "description": "Organizes and allocates funding for different aspects of the business, and files and reports all necessary information based on spending and profits."
       }
     ]
+  },
+  {
+    "slug": "crosshairs-and-scriptures",
+    "name": "Crosshairs & Scriptures",
+    "logo": "assets/logos/crosshairs-and-scriptures.svg",
+    "industry": "Apparel & Retail",
+    "tagline": "Faith · Family · Outdoors",
+    "services": ["Graphic T-Shirts", "Hats", "Apparel & Accessories"],
+    "description": "Crosshairs & Scriptures is a Christian outdoor-inspired apparel business. The company sells clothing and accessories that combine faith, hunting, and the outdoors, creating products that let people show their faith while representing their love for the outdoors. Crosshairs & Scriptures sells graphic t-shirts, hats, and other apparel through its online store and social media.",
+    "team": [
+      {
+        "id": "joel",
+        "name": "Joel Gish",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees the entire business as the primary manager, making final decisions, keeping the group organized, helping with business planning and product ideas, and making sure everyone completes their responsibilities."
+      },
+      {
+        "id": "richard",
+        "name": "Richard",
+        "title": "Marketing Manager",
+        "level": 2,
+        "reportsTo": "joel",
+        "description": "Manages social media marketing and creates promotional content to help advertise products, working to grow the company's social media presence."
+      },
+      {
+        "id": "kingston",
+        "name": "Kingston",
+        "title": "Sales Manager",
+        "level": 2,
+        "reportsTo": "joel",
+        "description": "Helps manage sales and customer orders, communicates with customers, tracks sales and popular products, and looks for ways to increase sales."
+      },
+      {
+        "id": "brennon",
+        "name": "Brennon",
+        "title": "Product Manager",
+        "level": 2,
+        "reportsTo": "joel",
+        "description": "Helps develop new product ideas and choose clothing and designs, keeps track of inventory and products, and helps make sure products meet the company's standards."
+      }
+    ]
   }
 ]
