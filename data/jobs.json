@@ -81,5 +81,37 @@
       "Quarterly raises based on performance and opportunities for growth within the company"
     ],
     "whyJoinUs": "Join a pet-friendly team that brings convenient grooming directly to dog owners. Work alongside a partner in a mobile setting, build your grooming skills through training, and grow with Bubbles & Barks as we complete staffing for our five-van fleet."
+  },
+  {
+    "id": "peasebeez-it-support",
+    "companySlug": "pease-beez",
+    "title": "IT Support",
+    "department": "IT",
+    "reportsTo": "Emme Dressler, General Manager",
+    "type": "Full-Time",
+    "pay": "$95,000 - $105,000 a year",
+    "summary": "Provide technical support to employees by troubleshooting hardware, software, network, and system issues. Assist with setting up devices, resolving technical problems, managing user accounts, and ensuring systems operate efficiently, and help keep the website, product drops, and online services up to date.",
+    "responsibilities": [
+      "Troubleshoot hardware, software, and network issues",
+      "Provide technical support",
+      "Install, configure, and maintain computers and other devices",
+      "Perform routine system updates and maintenance",
+      "Diagnose and resolve technical problems in a timely manner"
+    ],
+    "requiredQualifications": [
+      "Bachelor's degree",
+      "Good communication and customer service skills",
+      "Knowledge of computer hardware, software, and networking",
+      "Familiarity with Windows, macOS, and other operating systems",
+      "Willingness to learn new technologies and systems"
+    ],
+    "preferredQualifications": [
+      "2 years of work in IT support",
+      "Strong attention to detail",
+      "Ability to code",
+      "Familiarity with creating a website"
+    ],
+    "benefits": ["Health insurance", "Free or discounted products"],
+    "whyJoinUs": "Join us to help support natural-based products. We're a new business with big hopes of becoming one of the world's largest health and beauty companies, made up of determined, hardworking people who genuinely care about each other and our mission to make health and beauty care environmentally friendly."
   }
 ]
