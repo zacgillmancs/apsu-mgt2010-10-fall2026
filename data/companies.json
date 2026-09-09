@@ -249,5 +249,39 @@
         "description": "Helps develop new product ideas and choose clothing and designs, keeps track of inventory and products, and helps make sure products meet the company's standards."
       }
     ]
+  },
+  {
+    "slug": "coffee-trip",
+    "name": "Coffee Trip",
+    "logo": "assets/logos/coffee-trip.svg",
+    "industry": "Mobile Food & Beverage Services",
+    "tagline": "Coffee and baked goods, anywhere, anytime.",
+    "services": ["Coffee", "Baked Goods", "Mobile Catering"],
+    "description": "Coffee Trip is a moving cafe on wheels that can be rented to serve people with a smile, a fresh cup of coffee, and baked goods anywhere, at any time.",
+    "team": [
+      {
+        "id": "annika",
+        "name": "Annika Sosa",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees the business as the primary manager, planning and organizing operations to ensure everything runs smoothly and efficiently."
+      },
+      {
+        "id": "timmy",
+        "name": "Timmy",
+        "title": "Financial Manager",
+        "level": 2,
+        "reportsTo": "annika",
+        "description": "Gives advice, strategies, and reports on the financial health of the business, including what can and cannot be done."
+      },
+      {
+        "id": "kamiyah",
+        "name": "Kamiyah Hollins",
+        "title": "Marketing Coordinator",
+        "level": 2,
+        "reportsTo": "annika",
+        "description": "Ensures the business reaches the right audience with advertisements and campaigns aligned with its goals."
+      }
+    ]
   }
 ]
