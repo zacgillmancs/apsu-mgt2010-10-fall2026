@@ -162,5 +162,73 @@
       "Professional certification in the field of Information Technology",
       "Minimum of 2 years of relevant experience required"
     ]
+  },
+  {
+    "id": "crosshairs-director-customer-service",
+    "companySlug": "crosshairs-and-scriptures",
+    "title": "Director of Customer Service and Community Relations",
+    "department": "Customer Service",
+    "reportsTo": "Joel Gish, General Manager",
+    "summary": "The Customer Service and Community Relations employee will help our company build strong relationships with customers. They will answer customer questions, handle feedback, and help make sure customers have a positive experience with the company.",
+    "responsibilities": [
+      "Answer customer questions and messages",
+      "Handle customer feedback and concerns",
+      "Help build relationships with customers and the local community",
+      "Help promote a positive image of the company",
+      "Encourage repeat customers and word-of-mouth business"
+    ],
+    "requiredQualifications": [
+      "Good communication skills",
+      "Friendly and helpful attitude",
+      "Ability to work well with a team"
+    ],
+    "preferredQualifications": [
+      "Experience with customer service or sales",
+      "Knowledge of hunting, fishing, Christianity, or outdoor activities"
+    ],
+    "benefits": [
+      "Competitive hourly pay",
+      "Flexible work schedule",
+      "Opportunity to gain business experience",
+      "Potential for raises as the company grows"
+    ],
+    "whyJoinUs": "We are a growing company that combines faith and the outdoors. This position gives employees the opportunity to help build a brand, work with customers, and gain real-world business experience."
+  },
+  {
+    "id": "frontier-kitchen-event-planner",
+    "companySlug": "frontier-kitchen",
+    "title": "Event Planner",
+    "department": "Events",
+    "reportsTo": "Maddy Kosturko, General Manager",
+    "location": "Nashville, TN",
+    "type": "Full-Time",
+    "pay": "$88,000 - $104,000",
+    "summary": "Frontier Kitchen seeks an organized, creative Event Planner to coordinate private parties, community gatherings, and restaurant events. This position manages events from initial guest inquiry through completion, keeping plans within budget and delivering a welcoming Western-themed dining experience.",
+    "responsibilities": [
+      "Meet with guests to establish event goals, attendance, menus, schedules, and budgets",
+      "Coordinate vendors, decorations, room setup, and event timelines with restaurant staff",
+      "Partner with the Sales Manager on bookings and the Marketing Manager on event promotions",
+      "Prepare event budgets, track expenses with the Finance Manager, and obtain approval for purchases",
+      "Oversee event execution, resolve guest concerns, and gather feedback to improve future events"
+    ],
+    "requiredQualifications": [
+      "Bachelor's degree in hospitality management, business, event management, or a related field",
+      "At least two years of experience coordinating events in a restaurant, hospitality, or related setting",
+      "Strong communication, organization, budgeting, and problem-solving skills; availability for scheduled evening and weekend events"
+    ],
+    "preferredQualifications": [
+      "Experience planning private dining events, celebrations, or community gatherings",
+      "Experience with event scheduling software, spreadsheets, and vendor coordination"
+    ],
+    "benefits": [
+      "Health insurance: medical, dental, and vision coverage",
+      "Paid time off: vacation days, sick leave, and personal days",
+      "Retirement savings: a 401(k) plan with an employer match",
+      "Employee meal discounts: free or discounted meals during shifts",
+      "Flexible scheduling: adjusted hours around evening and weekend events",
+      "Professional development: paid event-planning courses and certifications",
+      "Performance bonuses: bonuses for meeting event sales and guest satisfaction goals"
+    ],
+    "whyJoinUs": "Join Frontier Kitchen to bring creative event ideas to life in a welcoming, Western-themed restaurant. Work closely with our management team to create enjoyable guest experiences and build lasting connections with the community."
   }
 ]
