@@ -263,5 +263,39 @@
       "Travel and relocation stipend"
     ],
     "whyJoinUs": "Chosen Academy offers employees a fun, fulfilling work environment that values your health and happiness. By joining us, you'll contribute to our mission of empowering individuals to be the best version of themselves through fitness, recreation, and movement — the people we empower aren't just our customers, but our staff as well."
+  },
+  {
+    "id": "coffeetrip-operational-manager",
+    "companySlug": "coffee-trip",
+    "title": "Operational Manager",
+    "department": "Operations",
+    "reportsTo": "Annika Sosa, General Manager",
+    "type": "Full-Time",
+    "pay": "$60,000 - $90,000 a year",
+    "summary": "Responsible for organizing rented-out events on the app to ensure that bookings run smoothly with great quality service, coordinating the setup of the mobile cafe, scheduling frequent inspections of the mobile cafe, and managing the supply chain of cafe needs.",
+    "responsibilities": [
+      "Check in and coordinate mobile cafe bookings",
+      "Manage cafe inventory to ensure products are fresh and stocked",
+      "Plan delivery and set up the mobile cafe at the correct time and location",
+      "Conduct frequent inspections of the vehicle, espresso machines, plumbing, and electrical systems",
+      "Schedule baristas to keep everything clear and organized"
+    ],
+    "requiredQualifications": [
+      "Experience using a logistics platform",
+      "Experience in food service",
+      "2-4 years of management experience"
+    ],
+    "preferredQualifications": [
+      "Bachelor's degree",
+      "Experience with catering or managing events"
+    ],
+    "benefits": [
+      "Full medical insurance coverage",
+      "Flexible schedule",
+      "Company-provided work tech",
+      "One free rented-out mobile cafe per year for personal events",
+      "Unlimited free drinks"
+    ],
+    "whyJoinUs": "We're glad to work and travel with the crew to experience and participate in important events, all while giving fresh, wonderful coffee to our customers — delivering high-quality service with just one click on our app to make everyone's day."
   }
 ]
