@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#c8891a"/>
+  <defs>
+    <g id="hex">
+      <polygon points="30,0 60,17 60,52 30,69 0,52 0,17" fill="none" stroke="#f6dca0" stroke-width="3"/>
+    </g>
+  </defs>
+  <use href="#hex" x="140" y="60"/>
+  <use href="#hex" x="200" y="60"/>
+  <use href="#hex" x="170" y="112"/>
+  <use href="#hex" x="230" y="112"/>
+  <use href="#hex" x="140" y="164"/>
+  <use href="#hex" x="200" y="164"/>
+  <path d="M195 230 q5 20 0 35 q-5 -15 0 -35 Z" fill="#f6dca0"/>
+</svg>

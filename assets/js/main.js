@@ -425,14 +425,22 @@ function newsByline(article) {
   return `${article.outlet} · By ${article.author} · ${formatShortDate(article.date)}`;
 }
 
+function newsThumbnailHTML(article) {
+  if (!article.image) return "";
+  return `<img class="news-thumb" src="${article.image}" alt="" />`;
+}
+
 function newsTeaserHTML(article) {
   return `
     <article class="news-teaser">
-      <p class="news-kicker">${article.outlet}</p>
-      <h3 class="news-headline"><a href="article.html?id=${article.id}">${article.headline}</a></h3>
-      <p class="news-meta">By ${article.author} · ${formatShortDate(article.date)}</p>
-      <p class="news-snippet">${articleSnippet(article)}</p>
-      <a class="news-read-more" href="article.html?id=${article.id}">Read full article &rarr;</a>
+      ${newsThumbnailHTML(article)}
+      <div class="news-teaser-body">
+        <p class="news-kicker">${article.outlet}</p>
+        <h3 class="news-headline"><a href="article.html?id=${article.id}">${article.headline}</a></h3>
+        <p class="news-meta">By ${article.author} · ${formatShortDate(article.date)}</p>
+        <p class="news-snippet">${articleSnippet(article)}</p>
+        <a class="news-read-more" href="article.html?id=${article.id}">Read full article &rarr;</a>
+      </div>
     </article>
   `;
 }
@@ -452,14 +460,17 @@ function initNewsSection(container, articles) {
 function feedItemHTML(article, company) {
   return `
     <article class="feed-item">
-      <p class="news-kicker">${article.outlet}</p>
-      <h3 class="news-headline"><a href="article.html?id=${article.id}">${article.headline}</a></h3>
-      <p class="news-meta">
-        By ${article.author} · ${formatShortDate(article.date)}
-        ${company ? `· <a class="feed-company-link" href="company.html?slug=${company.slug}">${company.name}</a>` : ""}
-      </p>
-      <p class="news-snippet">${articleSnippet(article)}</p>
-      <a class="news-read-more" href="article.html?id=${article.id}">Read full article &rarr;</a>
+      ${newsThumbnailHTML(article)}
+      <div class="news-teaser-body">
+        <p class="news-kicker">${article.outlet}</p>
+        <h3 class="news-headline"><a href="article.html?id=${article.id}">${article.headline}</a></h3>
+        <p class="news-meta">
+          By ${article.author} · ${formatShortDate(article.date)}
+          ${company ? `· <a class="feed-company-link" href="company.html?slug=${company.slug}">${company.name}</a>` : ""}
+        </p>
+        <p class="news-snippet">${articleSnippet(article)}</p>
+        <a class="news-read-more" href="article.html?id=${article.id}">Read full article &rarr;</a>
+      </div>
     </article>
   `;
 }
@@ -508,6 +519,7 @@ async function initArticlePage() {
     : "";
 
   document.getElementById("article-body").innerHTML = `
+    ${article.image ? `<img class="news-hero-image" src="${article.image}" alt="" />` : ""}
     <p class="news-kicker">${article.outlet}</p>
     <h1 class="news-headline">${article.headline}</h1>
     <p class="news-meta">By ${article.author} · ${formatShortDate(article.date)}</p>

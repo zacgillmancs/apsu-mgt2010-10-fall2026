@@ -154,13 +154,17 @@ Fictional news articles can be attached to any company via `data/news.json`:
   "date": "2026-09-09",
   "outlet": "Fictional outlet name, e.g. The Clarksville Ledger",
   "author": "Fictional reporter name",
+  "image": "assets/news/theme-xyz.svg (optional featured image)",
   "body": ["First paragraph.", "Second paragraph.", "..."]
 }
 ```
 
 Every company currently has one auto-generated "launch" article, each
 written by a different fictional outlet/reporter so the News page doesn't
-read like the same press release nine times. There are three places
+read like the same press release nine times. The optional `image` field
+points at a small generic themed graphic (`assets/news/theme-*.svg`) shown
+as a thumbnail in feeds and a full-width hero on the article page — pick
+whichever existing theme fits, or add a new one. There are three places
 articles show up:
 
 - **`news.html`** — an RSS-style feed of every article across every company,
