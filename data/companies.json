@@ -366,5 +366,47 @@
         "description": "Oversees sales strategy and financial management, tracking revenue and expenses to support the company's growth."
       }
     ]
+  },
+  {
+    "slug": "chosen-academy",
+    "name": "Chosen Academy",
+    "logo": "assets/logos/chosen-academy.png",
+    "industry": "Service — Recreation & Fitness Complex",
+    "tagline": "Empowering people through fitness, recreation, and movement.",
+    "services": ["Fitness Facilities", "Pool", "Basketball Courts", "Indoor Soccer Field", "Dance Studios", "Tennis Courts"],
+    "description": "Chosen Academy is an all-inclusive gym offering workout facilities, a pool, basketball courts, an indoor soccer field, dance studios, tennis courts, and a welcoming environment. Its mission is to empower individuals to be the best version of themselves through fitness, recreation, and movement — for both members and staff.",
+    "team": [
+      {
+        "id": "triston",
+        "name": "Triston Hauser",
+        "title": "General Manager",
+        "level": 1,
+        "description": "Oversees the growth and success of all Chosen Academy facilities as the primary manager, managing gym finances and budgeting, overseeing daily operations, monitoring member satisfaction, resolving conflicts, driving marketing campaigns, upkeeping the facility, and confirming adherence to health guidelines."
+      },
+      {
+        "id": "earnest",
+        "name": "Earnest Williams",
+        "title": "HR Director and Event Coordinator",
+        "level": 2,
+        "reportsTo": "triston",
+        "description": "Oversees recruitment of gym staff and manages local relations, training staff, creating job posts, hosting and attending job fairs, creating event flyers, and handling staff inquiries and complaints."
+      },
+      {
+        "id": "lilly",
+        "name": "Lilly Elean",
+        "title": "Dance and Class Coordinator",
+        "level": 2,
+        "reportsTo": "triston",
+        "description": "Facilitates all dance and fitness classes and studios, staffing each class's coach, handling customer class-related inquiries, training coaches, meeting with local dance programs for growth, and continually evolving the dance and fitness classes offered."
+      },
+      {
+        "id": "dwjuan",
+        "name": "Dwjuan Bradford",
+        "title": "Athletic Coordinator",
+        "level": 2,
+        "reportsTo": "triston",
+        "description": "Organizes all athletic events and areas, training coaches, overseeing rehab facilities, ensuring safe athletic events, monitoring and issuing repairs for athletic areas, scheduling athletic events, and providing necessary equipment to customers."
+      }
+    ]
   }
 ]
