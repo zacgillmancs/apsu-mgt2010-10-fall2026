@@ -58,8 +58,8 @@
         "description": "Oversees both front-of-house and kitchen to ensure fast and smooth service, hires, trains, schedules, and mentors all team members, and enforces health codes, labor laws, and safety regulations."
       },
       {
-        "id": "yucheng",
-        "name": "Yucheng Weng",
+        "id": "yuchen",
+        "name": "Yu Chen Weng",
         "title": "Marketing Coordinator",
         "level": 2,
         "reportsTo": "marcus",
@@ -109,7 +109,7 @@
       },
       {
         "id": "riley",
-        "name": "Riley Denote",
+        "name": "Riley DeNote",
         "title": "Marketing Coordinator",
         "level": 2,
         "reportsTo": "kristen",
@@ -149,8 +149,8 @@
         "description": "Manages customer relationships and sales channels, tracks orders, and works to grow revenue for Pease Beez's honey-based products."
       },
       {
-        "id": "ameila",
-        "name": "Ameila Pease",
+        "id": "amelia",
+        "name": "Amelia Pease",
         "title": "Marketing Coordinator",
         "level": 2,
         "reportsTo": "emme",
@@ -267,8 +267,8 @@
         "description": "Oversees the business as the primary manager, planning and organizing operations to ensure everything runs smoothly and efficiently."
       },
       {
-        "id": "timmy",
-        "name": "Timmothy Flenoy",
+        "id": "tim",
+        "name": "Tim Flenoy",
         "title": "Financial Manager",
         "level": 2,
         "reportsTo": "annika",
@@ -384,8 +384,8 @@
         "description": "Oversees the growth and success of all Chosen Academy facilities as the primary manager, managing gym finances and budgeting, overseeing daily operations, monitoring member satisfaction, resolving conflicts, driving marketing campaigns, upkeeping the facility, and confirming adherence to health guidelines."
       },
       {
-        "id": "earnest",
-        "name": "Earnest Williams",
+        "id": "ej",
+        "name": "EJ Williams",
         "title": "HR Director and Event Coordinator",
         "level": 2,
         "reportsTo": "triston",
@@ -400,8 +400,8 @@
         "description": "Facilitates all dance and fitness classes and studios, staffing each class's coach, handling customer class-related inquiries, training coaches, meeting with local dance programs for growth, and continually evolving the dance and fitness classes offered."
       },
       {
-        "id": "dwjuan",
-        "name": "Dwjuan Bradford",
+        "id": "juan",
+        "name": "Juan Bradford",
         "title": "Athletic Coordinator",
         "level": 2,
         "reportsTo": "triston",
